@@ -25,10 +25,4 @@ BOOKINGS:
 UPDATE/ADD BOOKINGS:
     Both are form pages that do what they say they do... Update and Add Bookings to the Bookings list.
 
-I will also make the receptionist login details for you.
-
-They are:
-    username: Manager
-    password: doggy_daycare_receptionist
-
 Thank you for your time.
