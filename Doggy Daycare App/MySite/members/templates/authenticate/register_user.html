@@ -1,0 +1,27 @@
+{% extends "doggy_daycare/base.html" %}
+
+{% block content %}
+
+{% if form.errors %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>There was an error with your form</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+
+<div class="shadow p-4 mb-5 bg-body rounded">
+    <h1>Register</h1>
+
+     <!-- Form for user registration -->
+    <form action="{% url 'register_user' %}" method="post">
+        {% csrf_token %}
+
+        <!-- Renders form fields as paragraphs -->
+        {{ form.as_p }}
+
+        <br><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

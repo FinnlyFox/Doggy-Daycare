@@ -1,0 +1,8 @@
+This site was inspired to be a similar concept to Trello ©, but obviously for pets!
+
+Cites:
+Codemy.com
+^ I have used this youtube channel for additional resources
+
+https://docs.djangoproject.com/en/4.2/
+^ Django docs

@@ -1,0 +1,34 @@
+This note is purely to explain how the webpage works for the different types of users.
+
+UNSIGNED IN USERS:
+    They can view the home page (A short introduction to the company [Doggy Daycare])
+    They CANNOT view the Bookings tab AND the ADD_BOOKINGS tab is hidden for anyone that is not staff.
+
+SIGNED IN USERS:
+    They can view the home page AND the Bookings page.
+    They CANNOT see the other ADD_BOOKING tab as they are not staff users.
+    They CANNOT Update/Delete Bookings in the Bookings page.
+
+STAFF USERS (ADMIN OR SET UP RECEPTIONIST PROFILE):
+    They have FULL access to the website.
+    They can view everything (IF THEY ARE LOGGED IN).
+    They can ADD UPDATE AND DELETE Bookings.
+
+Now I want to explain what each page is on my site since it is kinda simple.
+
+HOME PAGE:
+    This is just a small "ad" you could say for the company, It gives some small information about the company and such.
+
+BOOKINGS:
+    This page allows you to see, update and delete (if you are a staff member) Bookings as needed.
+
+UPDATE/ADD BOOKINGS:
+    Both are form pages that do what they say they do... Update and Add Bookings to the Bookings list.
+
+I will also make the receptionist login details for you.
+
+They are:
+    username: Manager
+    password: doggy_daycare_receptionist
+
+Thank you for your time.

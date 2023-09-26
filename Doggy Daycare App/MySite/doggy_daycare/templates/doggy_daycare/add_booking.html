@@ -1,0 +1,38 @@
+{% extends "doggy_daycare/base.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <!-- Display the booking form if the user is logged in -->
+    <div class="shadow p-5 my-5 bg-body rounded">
+        <center>
+            <div class="row mb-3">
+                <div class="col my-2">
+                    <h2>Add Booking to Database</h2>
+                </div>
+            </div>
+            {% if submitted %}
+                <!-- Display a success message if a booking was successfully submitted -->
+                Your Booking was submitted successfully!!
+            {% else %}
+                <!-- Display the booking form -->
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    
+                    <!-- Render form fields as paragraphs -->
+                    {{ form.as_p }}
+
+                    <input type="submit" value="Submit" class="btn btn-secondary">
+                </form>
+            {% endif %}
+        </center>
+    </div>
+{% else %}
+    <!-- Display a message and a login link if the user is not logged in -->
+    <center>
+        <h1>You may only add a booking if you are logged in!</h1>
+        <a href="{% url 'login' %}" class="btn text-light my-2" style="background-color: #002c3d;">Login Here</a>
+    </center>
+{% endif %}
+
+{% endblock %}

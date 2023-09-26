@@ -1,0 +1,29 @@
+{% extends "doggy_daycare/base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Login</h1>
+    <!-- Form for user authentication -->
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <!-- Username -->
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
+        </div>
+        <!-- Password -->
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <br>
+        <!-- Submit button for the login form -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br>
+    <!-- Link to register page -->
+    <p>Don't have an account? <a href="register_user">Register here</a></p>
+</div>
+
+{% endblock %}

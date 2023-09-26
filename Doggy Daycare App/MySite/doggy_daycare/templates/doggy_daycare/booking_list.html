@@ -1,0 +1,41 @@
+{% extends "doggy_daycare/base.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+  <h2 class="text-center mb-5">Current Bookings:</h2>
+  <ul>
+    {% for booking in booking_list %}
+      <!-- Display booking details in a card -->
+      <div class="card text-center">
+          <div class="card-header">
+              Owner: {{ booking.first_name }} {{ booking.last_name }}
+          </div>
+          <div class="card-body">
+              <h5 class="card-title">Pet name: {{ booking.pet }}</h5>
+              <p class="card-text">Description: {{ booking.description }}</p>
+          </div>
+          <div class="card-footer text-muted">
+              Date: {{ booking.date }}
+          </div>
+      </div>
+
+      <!-- Display update and delete buttons for managers or staff users -->
+      {% if user.role == "Manager" or user.is_staff %}
+          <center>
+              <a class="btn btn-secondary my-1" href="{% url 'doggy_daycare:update-booking' booking.id %}" role="button">Update</a>
+              <a class="btn btn-danger my-1" href="{% url 'doggy_daycare:delete-booking' booking.id %}" role="button">Delete</a>
+          </center>
+      {% endif %}
+
+      <br><br>
+    {% endfor %}
+  </ul>
+{% else %}
+  <center>
+      <h1>You may only view bookings if you are logged in!</h1>
+      <a href="{% url 'login' %}" class="btn text-light my-2" style="background-color: #002c3d;">Login Here</a>
+  </center>
+{% endif %}
+  
+{% endblock %}

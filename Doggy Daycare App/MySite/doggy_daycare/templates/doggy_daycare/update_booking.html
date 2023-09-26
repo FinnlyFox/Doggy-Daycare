@@ -1,0 +1,22 @@
+{% extends "doggy_daycare/base.html" %}
+
+{% block content %}
+<div class="shadow p-5 my-5 bg-body rounded">
+
+    <center>
+    <div class="row">
+        <div class="col my-2">
+            <h2>Update Booking:</h2>
+        </div>
+    </div>
+    <!-- Booking update form -->
+    <form action="" method=POST>
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Update" class="btn btn-secondary">
+    </form>
+    </center>
+
+{% endblock %}

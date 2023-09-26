@@ -1,0 +1,71 @@
+{% extends "doggy_daycare/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="shadow p-5 my-5 bg-body rounded">
+
+    <center>
+        <div class="row">
+            <div class="col my-2">
+                <h2 style="font-style: italic;">Hello! Welcome to Doggy Daycare's webpage. Here you can view all bookings currently registered.</h2>
+            </div>
+        </div>
+    </center>
+    
+
+    <div class="row">
+        <!-- Display an image on the left -->
+        <div class="col-md-4 mt-5">
+            <img src="{% static 'doggy_daycare/header_image.jpg' %}" class="card-img-top" alt="Insert Photo Here" style="border: 2px solid rgb(255, 255, 255);">
+        </div>
+        <!-- Display text on the right -->
+        <div class="col-md-8 align-self-center text-center mt-5">
+            <div class="shadow p-4 mb-5 bg-body rounded">
+                <h1 style="font-style: italic;">Does your pet need a good spa day? We got you covered!</h1>
+                <p class="mt-5">Doggy Daycare © Specializing in making your pet the happiest they can be for the last 20 years.</p>
+                <muted><p style="font-style: italic;">Founded in 2003.</p></muted>
+            </div>
+        </div>
+    </div>
+
+    <center>
+    <div class="row">
+        <div class="col my-2">
+            <!-- List of services offered -->
+            <h2>Services we offer: </h2>
+            <ul>
+                <li>Grooming services, including baths, haircuts, and nail trims</li>
+                <li>Massages and relaxation therapy for pets</li>
+                <li>Specialized skin and coat treatments</li>
+                <li>Teeth cleaning and dental care</li>
+                <li>Customized pet styling and coloring</li>
+                <li>Pet facials and spa treatments</li>
+                <li>Pet-friendly swimming pools</li>
+                <li>Organic and natural pet products for sale</li>
+                <li>Pet daycare and boarding services</li>
+                <li>Pet photography</li>
+            </ul>
+            
+        </div>
+    </div>
+    </center>
+
+    <center>
+    <div class="row">
+        <div class="col my-2">
+            <h3 class="mb-4">Thank you for stopping by!</h3>
+        </div>
+    </div>
+    </center>
+
+    <center>
+        <muted>
+            <div>
+                Sponsored by: TheVetNextDoor.org ©
+            </div>
+        </muted>
+    </center>
+
+</div>
+
+{% endblock %}

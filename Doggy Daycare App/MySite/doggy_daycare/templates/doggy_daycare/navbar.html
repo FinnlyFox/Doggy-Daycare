@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'doggy_daycare:home' %}">Doggy Daycare</a>
+
+        <!-- Toggle button for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <!-- Link to the 'Bookings' page -->
+                    <a class="nav-link" href="{% url 'doggy_daycare:bookings' %}">Bookings</a>
+                </li>
+                
+                <!-- Display 'Add A Booking' link for Manager or staff users -->
+                {% if user.role == "Manager" or user.is_staff %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'doggy_daycare:add-booking' %}">Add A Booking</a>
+                    </li>
+                {% endif %}
+                
+                <!-- Display 'Logout' or 'Login' link based on user login status -->
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
