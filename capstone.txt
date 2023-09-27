@@ -1,0 +1,5 @@
+url = ""
+
+Since the file stated I only had to do a few of my functions/scripts I have done the documentation for all the main 
+views (left out the login/register page views), and I left the auto documentation from Sphinx for the models.py files and such
+since I thought it was well written already.
