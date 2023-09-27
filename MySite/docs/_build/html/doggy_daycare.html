@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>doggy_daycare package &mdash; Doggy Daycare 00.00.01 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d7bb8d4d"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="doggy_daycare.migrations package" href="doggy_daycare.migrations.html" />
+    <link rel="prev" title="doggy_daycare" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Doggy Daycare
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">doggy_daycare</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">doggy_daycare package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="doggy_daycare.migrations.html">doggy_daycare.migrations package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-doggy_daycare.admin">doggy_daycare.admin module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#doggy_daycare.admin.BookingAdmin"><code class="docutils literal notranslate"><span class="pre">BookingAdmin</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-doggy_daycare.apps">doggy_daycare.apps module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#doggy_daycare.apps.DoggyDaycareConfig"><code class="docutils literal notranslate"><span class="pre">DoggyDaycareConfig</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-doggy_daycare.forms">doggy_daycare.forms module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#doggy_daycare.forms.BookingForm"><code class="docutils literal notranslate"><span class="pre">BookingForm</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-doggy_daycare.models">doggy_daycare.models module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#doggy_daycare.models.Booking"><code class="docutils literal notranslate"><span class="pre">Booking</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-doggy_daycare.tests">doggy_daycare.tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-doggy_daycare.urls">doggy_daycare.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-doggy_daycare.views">doggy_daycare.views module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#doggy_daycare.views.add_booking"><code class="docutils literal notranslate"><span class="pre">add_booking()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#doggy_daycare.views.all_bookings"><code class="docutils literal notranslate"><span class="pre">all_bookings()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#doggy_daycare.views.delete_booking"><code class="docutils literal notranslate"><span class="pre">delete_booking()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#doggy_daycare.views.home"><code class="docutils literal notranslate"><span class="pre">home()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#doggy_daycare.views.update_booking"><code class="docutils literal notranslate"><span class="pre">update_booking()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-doggy_daycare">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Doggy Daycare</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">doggy_daycare</a></li>
+      <li class="breadcrumb-item active">doggy_daycare package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/doggy_daycare.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="doggy-daycare-package">
+<h1>doggy_daycare package<a class="headerlink" href="#doggy-daycare-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="doggy_daycare.migrations.html">doggy_daycare.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="doggy_daycare.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doggy_daycare.migrations.html#module-doggy_daycare.migrations.0001_initial">doggy_daycare.migrations.0001_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="doggy_daycare.migrations.html#doggy_daycare.migrations.0001_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="doggy_daycare.migrations.html#doggy_daycare.migrations.0001_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="doggy_daycare.migrations.html#doggy_daycare.migrations.0001_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="doggy_daycare.migrations.html#doggy_daycare.migrations.0001_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="doggy_daycare.migrations.html#module-doggy_daycare.migrations.0002_delete_choice_delete_question">doggy_daycare.migrations.0002_delete_choice_delete_question module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="doggy_daycare.migrations.html#doggy_daycare.migrations.0002_delete_choice_delete_question.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="doggy_daycare.migrations.html#doggy_daycare.migrations.0002_delete_choice_delete_question.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="doggy_daycare.migrations.html#doggy_daycare.migrations.0002_delete_choice_delete_question.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="doggy_daycare.migrations.html#module-doggy_daycare.migrations.0003_initial">doggy_daycare.migrations.0003_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="doggy_daycare.migrations.html#doggy_daycare.migrations.0003_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="doggy_daycare.migrations.html#doggy_daycare.migrations.0003_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="doggy_daycare.migrations.html#doggy_daycare.migrations.0003_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="doggy_daycare.migrations.html#doggy_daycare.migrations.0003_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="doggy_daycare.migrations.html#module-doggy_daycare.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-doggy_daycare.admin">
+<span id="doggy-daycare-admin-module"></span><h2>doggy_daycare.admin module<a class="headerlink" href="#module-doggy_daycare.admin" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="doggy_daycare.admin.BookingAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">doggy_daycare.admin.</span></span><span class="sig-name descname"><span class="pre">BookingAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doggy_daycare/admin.html#BookingAdmin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#doggy_daycare.admin.BookingAdmin" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelAdmin</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.admin.BookingAdmin.list_display">
+<span class="sig-name descname"><span class="pre">list_display</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('first_name',</span> <span class="pre">'last_name',</span> <span class="pre">'pet',</span> <span class="pre">'number',</span> <span class="pre">'email',</span> <span class="pre">'date')</span></em><a class="headerlink" href="#doggy_daycare.admin.BookingAdmin.list_display" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="doggy_daycare.admin.BookingAdmin.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#doggy_daycare.admin.BookingAdmin.media" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.admin.BookingAdmin.ordering">
+<span class="sig-name descname"><span class="pre">ordering</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('date',)</span></em><a class="headerlink" href="#doggy_daycare.admin.BookingAdmin.ordering" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.admin.BookingAdmin.search_fields">
+<span class="sig-name descname"><span class="pre">search_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('first_name',</span> <span class="pre">'last_name',</span> <span class="pre">'pet')</span></em><a class="headerlink" href="#doggy_daycare.admin.BookingAdmin.search_fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-doggy_daycare.apps">
+<span id="doggy-daycare-apps-module"></span><h2>doggy_daycare.apps module<a class="headerlink" href="#module-doggy_daycare.apps" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="doggy_daycare.apps.DoggyDaycareConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">doggy_daycare.apps.</span></span><span class="sig-name descname"><span class="pre">DoggyDaycareConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doggy_daycare/apps.html#DoggyDaycareConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#doggy_daycare.apps.DoggyDaycareConfig" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.apps.DoggyDaycareConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#doggy_daycare.apps.DoggyDaycareConfig.default_auto_field" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.apps.DoggyDaycareConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'doggy_daycare'</span></em><a class="headerlink" href="#doggy_daycare.apps.DoggyDaycareConfig.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-doggy_daycare.forms">
+<span id="doggy-daycare-forms-module"></span><h2>doggy_daycare.forms module<a class="headerlink" href="#module-doggy_daycare.forms" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="doggy_daycare.forms.BookingForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">doggy_daycare.forms.</span></span><span class="sig-name descname"><span class="pre">BookingForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doggy_daycare/forms.html#BookingForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#doggy_daycare.forms.BookingForm" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelForm</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="doggy_daycare.forms.BookingForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/doggy_daycare/forms.html#BookingForm.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#doggy_daycare.forms.BookingForm.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.forms.BookingForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('first_name',</span> <span class="pre">'last_name',</span> <span class="pre">'pet',</span> <span class="pre">'date',</span> <span class="pre">'number',</span> <span class="pre">'email',</span> <span class="pre">'description')</span></em><a class="headerlink" href="#doggy_daycare.forms.BookingForm.Meta.fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.forms.BookingForm.Meta.labels">
+<span class="sig-name descname"><span class="pre">labels</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'date':</span> <span class="pre">'',</span> <span class="pre">'description':</span> <span class="pre">'',</span> <span class="pre">'email':</span> <span class="pre">'',</span> <span class="pre">'first_name':</span> <span class="pre">'',</span> <span class="pre">'last_name':</span> <span class="pre">'',</span> <span class="pre">'number':</span> <span class="pre">'',</span> <span class="pre">'pet':</span> <span class="pre">''}</span></em><a class="headerlink" href="#doggy_daycare.forms.BookingForm.Meta.labels" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.forms.BookingForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#doggy_daycare.forms.BookingForm.Meta.model" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#doggy_daycare.models.Booking" title="doggy_daycare.models.Booking"><code class="xref py py-class docutils literal notranslate"><span class="pre">Booking</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.forms.BookingForm.Meta.widgets">
+<span class="sig-name descname"><span class="pre">widgets</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'date':</span> <span class="pre">&lt;django.forms.widgets.DateTimeInput</span> <span class="pre">object&gt;,</span> <span class="pre">'description':</span> <span class="pre">&lt;django.forms.widgets.Textarea</span> <span class="pre">object&gt;,</span> <span class="pre">'email':</span> <span class="pre">&lt;django.forms.widgets.EmailInput</span> <span class="pre">object&gt;,</span> <span class="pre">'first_name':</span> <span class="pre">&lt;django.forms.widgets.TextInput</span> <span class="pre">object&gt;,</span> <span class="pre">'last_name':</span> <span class="pre">&lt;django.forms.widgets.TextInput</span> <span class="pre">object&gt;,</span> <span class="pre">'number':</span> <span class="pre">&lt;django.forms.widgets.TextInput</span> <span class="pre">object&gt;,</span> <span class="pre">'pet':</span> <span class="pre">&lt;django.forms.widgets.TextInput</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#doggy_daycare.forms.BookingForm.Meta.widgets" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.forms.BookingForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'date':</span> <span class="pre">&lt;django.forms.fields.DateTimeField</span> <span class="pre">object&gt;,</span> <span class="pre">'description':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'first_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'last_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'number':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'pet':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#doggy_daycare.forms.BookingForm.base_fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.forms.BookingForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#doggy_daycare.forms.BookingForm.declared_fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="doggy_daycare.forms.BookingForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#doggy_daycare.forms.BookingForm.media" title="Link to this definition"></a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-doggy_daycare.models">
+<span id="doggy-daycare-models-module"></span><h2>doggy_daycare.models module<a class="headerlink" href="#module-doggy_daycare.models" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">doggy_daycare.models.</span></span><span class="sig-name descname"><span class="pre">Booking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doggy_daycare/models.html#Booking"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#doggy_daycare.models.Booking" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#doggy_daycare.models.Booking.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#doggy_daycare.models.Booking.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.date">
+<span class="sig-name descname"><span class="pre">date</span></span><a class="headerlink" href="#doggy_daycare.models.Booking.date" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#doggy_daycare.models.Booking.description" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#doggy_daycare.models.Booking.email" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.first_name">
+<span class="sig-name descname"><span class="pre">first_name</span></span><a class="headerlink" href="#doggy_daycare.models.Booking.first_name" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.get_next_by_date">
+<span class="sig-name descname"><span class="pre">get_next_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doggy_daycare.models.Booking.get_next_by_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.get_previous_by_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doggy_daycare.models.Booking.get_previous_by_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#doggy_daycare.models.Booking.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.last_name">
+<span class="sig-name descname"><span class="pre">last_name</span></span><a class="headerlink" href="#doggy_daycare.models.Booking.last_name" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.number">
+<span class="sig-name descname"><span class="pre">number</span></span><a class="headerlink" href="#doggy_daycare.models.Booking.number" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#doggy_daycare.models.Booking.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doggy_daycare.models.Booking.pet">
+<span class="sig-name descname"><span class="pre">pet</span></span><a class="headerlink" href="#doggy_daycare.models.Booking.pet" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-doggy_daycare.tests">
+<span id="doggy-daycare-tests-module"></span><h2>doggy_daycare.tests module<a class="headerlink" href="#module-doggy_daycare.tests" title="Link to this heading"></a></h2>
+</section>
+<section id="module-doggy_daycare.urls">
+<span id="doggy-daycare-urls-module"></span><h2>doggy_daycare.urls module<a class="headerlink" href="#module-doggy_daycare.urls" title="Link to this heading"></a></h2>
+</section>
+<section id="module-doggy_daycare.views">
+<span id="doggy-daycare-views-module"></span><h2>doggy_daycare.views module<a class="headerlink" href="#module-doggy_daycare.views" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="doggy_daycare.views.add_booking">
+<span class="sig-prename descclassname"><span class="pre">doggy_daycare.views.</span></span><span class="sig-name descname"><span class="pre">add_booking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doggy_daycare/views.html#add_booking"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#doggy_daycare.views.add_booking" title="Link to this definition"></a></dt>
+<dd><p>Add a new booking.</p>
+<p>This view function allows users to submit a new booking using a form. If the form is valid, the booking is saved,
+and the user is redirected to a success page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered booking form or a success page upon successful submission.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doggy_daycare.views.all_bookings">
+<span class="sig-prename descclassname"><span class="pre">doggy_daycare.views.</span></span><span class="sig-name descname"><span class="pre">all_bookings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doggy_daycare/views.html#all_bookings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#doggy_daycare.views.all_bookings" title="Link to this definition"></a></dt>
+<dd><p>Display a list of all bookings.</p>
+<p>This view function retrieves all Booking objects from the database and orders them by date.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered booking list page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doggy_daycare.views.delete_booking">
+<span class="sig-prename descclassname"><span class="pre">doggy_daycare.views.</span></span><span class="sig-name descname"><span class="pre">delete_booking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">booking_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doggy_daycare/views.html#delete_booking"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#doggy_daycare.views.delete_booking" title="Link to this definition"></a></dt>
+<dd><p>Delete an existing booking.</p>
+<p>This view function allows users to delete an existing booking. It retrieves the Booking object with the specified
+booking_id from the database and deletes it. After deletion, the user is redirected to the bookings list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object.</p></li>
+<li><p><strong>booking_id</strong> (<em>int</em>) – The ID of the booking to be deleted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A redirect to the booking list after deletion.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doggy_daycare.views.home">
+<span class="sig-prename descclassname"><span class="pre">doggy_daycare.views.</span></span><span class="sig-name descname"><span class="pre">home</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doggy_daycare/views.html#home"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#doggy_daycare.views.home" title="Link to this definition"></a></dt>
+<dd><p>Render the home page.</p>
+<p>This view function renders the home page of the Doggy Daycare website.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered home page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doggy_daycare.views.update_booking">
+<span class="sig-prename descclassname"><span class="pre">doggy_daycare.views.</span></span><span class="sig-name descname"><span class="pre">update_booking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">booking_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doggy_daycare/views.html#update_booking"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#doggy_daycare.views.update_booking" title="Link to this definition"></a></dt>
+<dd><p>Update an existing booking.</p>
+<p>This view function allows users to update an existing booking. It retrieves the Booking object with the specified
+booking_id from the database and pre-fills a form with the existing data. If the form is valid, the updated booking
+is saved, and the user is redirected to the bookings list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object.</p></li>
+<li><p><strong>booking_id</strong> (<em>int</em>) – The ID of the booking to be updated.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered booking update form or a redirect to the booking list upon successful update.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-doggy_daycare">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-doggy_daycare" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="doggy_daycare" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="doggy_daycare.migrations.html" class="btn btn-neutral float-right" title="doggy_daycare.migrations package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Joel.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
