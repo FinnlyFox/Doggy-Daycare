@@ -13,5 +13,9 @@ COPY . /app
 # Install Python dependencies from requirements.txt
 RUN pip install -r requirements.txt
 
+# Run migrations during the image build process
+RUN python manage.py makemigrations
+RUN python manage.py migrate
+
 # Start the Django development server
 CMD python manage.py runserver 0.0.0.0:8000
