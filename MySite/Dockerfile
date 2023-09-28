@@ -11,7 +11,7 @@ WORKDIR /app
 COPY . /app
 
 # Install Python dependencies from requirements.txt
-RUN pip install --user -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Start the Django development server
 CMD python manage.py runserver 0.0.0.0:8000
