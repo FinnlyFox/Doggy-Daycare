@@ -25,9 +25,13 @@ In order to install this site, I will assume a few things:
 
 1. You have Python installed.
 
-1. You have a code editor installed (my project was created in VSC)
+1. You have a code editor installed (my project was created in VSC).
 
-## Bash commands
+1. You have a DockerHub account.
+
+1. You have Docker Desktop set up on your pc.
+
+## Bash commands (Start up server)
 1. Open a CMD/Powershell terminal
 
    win + "cmd"
@@ -52,12 +56,18 @@ In order to install this site, I will assume a few things:
    ```bash
    python -m venv venv
 
+1. Activate the virtual environment
+
+   ```bash
+   venv\Scripts\activate
+
 1. Change into the django project directory
 
    ```bash
    cd MySite
 
 1. (Optional if you wish to access the admin features of the site) Create an admin user
+
    To log into the admin section use [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin) after the server is running.
    ```bash
    python manage.py createsuperuser
@@ -67,6 +77,53 @@ In order to install this site, I will assume a few things:
    Email address: admin@example.com
    Password: ********
    Password (again): ********
+
+1. Login to your DockerHub account in the terminal
+
+   P.S. Please make sure you have the website (DockerHub) open during this step, since I had problems until I opened it.
+
+   ```bash
+   docker login
+
+1. Use the Docker image to create a Docker container
+
+   P.S. Open the Dockerfile in your IDE (Just so that the IDE knows what the file contains[It somtimes has issues]) before doing this command.
+
+   ```bash
+    docker build -t "NameOfYourContainer" .
+
+1. Run the server on local host
+
+   Go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to view the website.
+
+   ```bash
+   docker run -d -p 8000:8000 "NameOfYourContainer"
+
+## Bash commands (Shut down server)
+
+1. Run this command to view the ID of the Image
+
+   ```bash
+   docker ps
+
+1. Enter the first 3 characters of the ID with this command to shut down the Image
+
+   ```bash
+   docker stop _ _ _
+
+1. Change directories back to the main directory
+
+   ```bash
+   cd..
+
+1. Deactivate the virtual environment
+
+   ```bash
+   venv\Scripts\deactivate
+
+1. Close the CMD/Powershell terminal.
+
+1. Good Bye!
 
 ## Credits
 
